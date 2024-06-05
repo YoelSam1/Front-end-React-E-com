@@ -2,7 +2,7 @@ import React from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { FaShoppingCart } from "react-icons/fa";
 import { useCart } from "../context/CartContext";
-import { Link } from "react-router-dom"; // Import Link
+import { Link } from "react-router-dom";
 
 const NavigationBar = () => {
   const { cartCount } = useCart();
