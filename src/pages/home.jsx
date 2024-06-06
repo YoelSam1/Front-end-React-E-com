@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Product from "../components/Product";
 import SearchComponent from "../components/Search";
-import { fetchProducts } from "../hooks/FetchApi";
+import { fetchProducts } from "../Hooks/FetchApi";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
