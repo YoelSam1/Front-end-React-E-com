@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Product from "../components/Product";
 import SearchComponent from "../components/Search";
-import { fetchProducts } from "../Hooks/FetchApi";
+import { fetchProducts } from "../hooks/FetchApi";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -13,7 +13,9 @@ const Home = () => {
         const data = await fetchProducts();
         setProducts(data);
         setFilteredProducts(data);
-      } catch (error) {}
+      } catch (error) {
+        console.error("Failed to fetch products:", error);
+      }
     };
 
     fetchData();
