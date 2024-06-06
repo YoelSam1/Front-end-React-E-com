@@ -6,10 +6,10 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import ProductDetail from "./pages/ProductDetail";
-import Navbar from "./components/Navbar"; // Keep the name as Navbar
+import Navbar from "./components/Navbar";
 import "./App.css";
 import Cart from "./pages/Cart";
-import { CartProvider } from "./context/CartContext"; // Import CartProvider
+import { CartProvider } from "./context/CartContext";
 import CheckoutSuccess from "./pages/CheckoutSuccess";
 
 function App() {
