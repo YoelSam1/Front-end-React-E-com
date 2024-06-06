@@ -13,9 +13,7 @@ const Home = () => {
         const data = await fetchProducts();
         setProducts(data);
         setFilteredProducts(data);
-      } catch (error) {
-        // Error handling can be added here if needed
-      }
+      } catch (error) {}
     };
 
     fetchData();
