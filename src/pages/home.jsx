@@ -14,11 +14,9 @@ const Home = () => {
         setProducts(data);
         setFilteredProducts(data);
       } catch (error) {
-        console.error("Failed to fetch products:", error);
+        // Error handling can be added here if needed
       }
     };
-
-    //
 
     fetchData();
   }, []);
