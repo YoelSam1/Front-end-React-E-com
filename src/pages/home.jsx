@@ -3,7 +3,7 @@ import Product from "../components/Product";
 import SearchComponent from "../components/Search";
 import { fetchProducts } from "../Hooks/FetchApi";
 
-export const Home = () => {
+const Home = () => {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
 
@@ -17,6 +17,8 @@ export const Home = () => {
         console.error("Failed to fetch products:", error);
       }
     };
+
+    //
 
     fetchData();
   }, []);
@@ -42,3 +44,5 @@ export const Home = () => {
     </div>
   );
 };
+
+export default Home;
