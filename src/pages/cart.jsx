@@ -5,8 +5,7 @@ import { useCart } from "../context/CartContext";
 import "../App.css";
 
 const Cart = () => {
-  const { cartItems, removeFromCart, updateQuantity, clearCart } = useCart(); // Include clearCart from CartContext
-
+  const { cartItems, removeFromCart, updateQuantity, clearCart } = useCart();
   const calculateDiscountedPrice = (item) => {
     if (item.discountedPrice && item.discountedPrice > 0) {
       return { original: item.price, discounted: item.discountedPrice };
