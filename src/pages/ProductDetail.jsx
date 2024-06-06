@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { fetchProductById } from "../components/fetch-api";
+import { fetchProductById } from "../Hooks/FetchApi";
 import { Button, Container, Row, Col, Card } from "react-bootstrap";
 import { useCart } from "../context/CartContext";
 

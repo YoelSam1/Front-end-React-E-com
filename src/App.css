@@ -52,3 +52,8 @@ main {
   max-width: 100%;
   object-fit: contain;
 }
+
+.navbar-nav .nav-link.active-link {
+  color: red !important;
+  font-weight: bold;
+}

@@ -1,8 +1,25 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-const Product = ({ product }) => {
+/**
+ *  loading hook
+ */
+function useLoading(delay = 1000) {
   const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, delay);
+
+    return () => clearTimeout(timer);
+  }, [delay]);
+
+  return loading;
+}
+
+const Product = ({ product }) => {
+  const loading = useLoading();
   const hasDiscount = product.discountedPrice !== product.price;
   const discountPercentage = hasDiscount
     ? (
@@ -10,14 +27,6 @@ const Product = ({ product }) => {
         100
       ).toFixed(2)
     : 0;
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
     <div className="col-md-4 mb-3 mt-5">

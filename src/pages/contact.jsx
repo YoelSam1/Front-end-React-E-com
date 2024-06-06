@@ -1,12 +1,38 @@
 import React from "react";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+
+const schema = yup.object().shape({
+  fullName: yup
+    .string()
+    .min(3, "Full name must be at least 3 characters")
+    .required("Full name is required"),
+  subject: yup
+    .string()
+    .min(3, "Subject must be at least 3 characters")
+    .required("Subject is required"),
+  email: yup
+    .string()
+    .email("Must be a valid email address")
+    .required("Email is required"),
+  body: yup
+    .string()
+    .min(3, "Body must be at least 3 characters")
+    .required("Body is required"),
+});
 
 const Contact = () => {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const formData = new FormData(event.target);
-    const formDataObj = Object.fromEntries(formData.entries());
-    console.log("Form data:", formDataObj);
-    // You can perform additional actions here, such as sending the form data to a server
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(schema),
+  });
+
+  const onSubmit = (data) => {
+    console.log("Form data:", data);
   };
 
   return (
@@ -15,20 +41,17 @@ const Contact = () => {
       <p className="text-center">Feel free to reach out to us!</p>
       <div className="row justify-content-center mt-5">
         <div className="col-md-6">
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit(onSubmit)}>
             <div className="form-group">
               <label htmlFor="fullName">Full Name</label>
               <input
                 type="text"
                 className="form-control"
                 id="fullName"
-                name="fullName"
+                {...register("fullName")}
                 placeholder="Enter your full name"
-                minLength="2"
-                pattern="[a-zA-Z0-9_]+"
-                title="Full name must be at least 3 characters"
-                required
               />
+              <p>{errors.fullName?.message}</p>
             </div>
             <div className="form-group mt-3">
               <label htmlFor="subject">Subject</label>
@@ -36,12 +59,10 @@ const Contact = () => {
                 type="text"
                 className="form-control"
                 id="subject"
-                name="subject"
+                {...register("subject")}
                 placeholder="Enter subject"
-                minLength="3"
-                title="Subject must be at least 3 characters"
-                required
               />
+              <p>{errors.subject?.message}</p>
             </div>
             <div className="form-group mt-3">
               <label htmlFor="email">Email</label>
@@ -49,24 +70,21 @@ const Contact = () => {
                 type="email"
                 className="form-control"
                 id="email"
-                name="email"
+                {...register("email")}
                 placeholder="Enter your email"
-                title="Must be a valid email address"
-                required
               />
+              <p>{errors.email?.message}</p>
             </div>
             <div className="form-group mt-3">
               <label htmlFor="body">Body</label>
               <textarea
                 className="form-control"
                 id="body"
-                name="body"
+                {...register("body")}
                 rows="5"
                 placeholder="Enter your message"
-                minLength="3"
-                title="Body must be at least 3 characters"
-                required
               ></textarea>
+              <p>{errors.body?.message}</p>
             </div>
             <button type="submit" className="btn btn-primary mt-3">
               Send Message
