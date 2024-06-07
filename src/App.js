@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Contact from "./pages/Contact";
+import Contact from "./pages/Contact"; // import Contact from "./pages/Contact";
 import About from "./pages/About";
 import ProductDetail from "./pages/ProductDetail";
 import Navbar from "./components/Navbar";
