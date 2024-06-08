@@ -26,6 +26,7 @@ const Contact = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
@@ -33,6 +34,8 @@ const Contact = () => {
 
   const onSubmit = (data) => {
     console.log("Form data:", data);
+
+    reset();
   };
 
   return (
