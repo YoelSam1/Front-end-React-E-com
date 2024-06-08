@@ -51,7 +51,9 @@ const Contact = () => {
                 {...register("fullName")}
                 placeholder="Enter your full name"
               />
-              <p>{errors.fullName?.message}</p>
+              {errors.fullName && (
+                <p className="text-danger">{errors.fullName.message}</p>
+              )}
             </div>
             <div className="form-group mt-3">
               <label htmlFor="subject">Subject</label>
@@ -62,7 +64,9 @@ const Contact = () => {
                 {...register("subject")}
                 placeholder="Enter subject"
               />
-              <p>{errors.subject?.message}</p>
+              {errors.subject && (
+                <p className="text-danger">{errors.subject.message}</p>
+              )}
             </div>
             <div className="form-group mt-3">
               <label htmlFor="email">Email</label>
@@ -73,7 +77,9 @@ const Contact = () => {
                 {...register("email")}
                 placeholder="Enter your email"
               />
-              <p>{errors.email?.message}</p>
+              {errors.email && (
+                <p className="text-danger">{errors.email.message}</p>
+              )}
             </div>
             <div className="form-group mt-3">
               <label htmlFor="body">Body</label>
@@ -84,7 +90,9 @@ const Contact = () => {
                 rows="5"
                 placeholder="Enter your message"
               ></textarea>
-              <p>{errors.body?.message}</p>
+              {errors.body && (
+                <p className="text-danger">{errors.body.message}</p>
+              )}
             </div>
             <button type="submit" className="btn btn-primary mt-3">
               Send Message

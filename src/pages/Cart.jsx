@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { useCart } from "../Context/CartContext";
+import { useCart } from "../Context/cartContext";
 import "../App.css";
 
 const Cart = () => {
