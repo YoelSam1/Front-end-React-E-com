@@ -15,6 +15,13 @@ const schema = yup.object().shape({
   email: yup
     .string()
     .email("Must be a valid email address")
+    .test("is-valid-tld", "Email address must have a valid domain", (value) => {
+      if (value) {
+        const tldPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        return tldPattern.test(value);
+      }
+      return true;
+    })
     .required("Email is required"),
   body: yup
     .string()
@@ -52,7 +59,7 @@ const Contact = () => {
                 className="form-control"
                 id="fullName"
                 {...register("fullName")}
-                placeholder="Enter your full name"
+                placeholder="Enter here..."
               />
               {errors.fullName && (
                 <p className="text-danger">{errors.fullName.message}</p>
@@ -65,7 +72,7 @@ const Contact = () => {
                 className="form-control"
                 id="subject"
                 {...register("subject")}
-                placeholder="Enter subject"
+                placeholder="Enter here..."
               />
               {errors.subject && (
                 <p className="text-danger">{errors.subject.message}</p>
@@ -78,7 +85,7 @@ const Contact = () => {
                 className="form-control"
                 id="email"
                 {...register("email")}
-                placeholder="Enter your email"
+                placeholder="Enter Valid email address here..."
               />
               {errors.email && (
                 <p className="text-danger">{errors.email.message}</p>
@@ -91,7 +98,7 @@ const Contact = () => {
                 id="body"
                 {...register("body")}
                 rows="5"
-                placeholder="Enter your message"
+                placeholder="Enter your message here..."
               ></textarea>
               {errors.body && (
                 <p className="text-danger">{errors.body.message}</p>
