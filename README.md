@@ -53,3 +53,15 @@ git clone git@github.com:your-username/ecommerce-store.git
 
 3. **Running:**
    `npm run start`
+
+
+## Contributing
+
+If you'd like to contribute to this project, please follow these steps:
+
+# Fork the repository.
+
+- Create a new branch (git checkout -b feature/your-feature-name).
+- Make your changes and commit them (git commit -m 'Add some feature').
+- Push to the branch (git push origin feature/your-feature-name).
+- Open a Pull Request for your changes to be reviewed.
