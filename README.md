@@ -33,6 +33,7 @@ Follow these steps to set up the project locally:
 
 ```bash
 git clone git@github.com:your-username/ecommerce-store.git
+```
 
 2. Install the dependencies:
 npm run start
