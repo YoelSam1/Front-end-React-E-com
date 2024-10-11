@@ -61,7 +61,7 @@ git clone git@github.com:your-username/ecommerce-store.git
 
 If you'd like to contribute to this project, please follow these steps:
 
-# Fork the repository.
+- Fork the repository.
 
 - Create a new branch (git checkout -b feature/your-feature-name).
 - Make your changes and commit them (git commit -m 'Add some feature').
