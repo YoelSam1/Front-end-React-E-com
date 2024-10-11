@@ -1,69 +1,59 @@
-# Getting Started with Create React App
+### Semester Project 2 - _EasyBid_ An auction site
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![image](./easybid-site%20.png)
 
-## Available Scripts
+- An auction site is looking to launch a website where users can add items to be bid on and bid on items other users have put up for auction.
 
-In the project directory, you can run:
+# About the project
 
-### `npm start`
+- When a new user joins the website, they are given 1000 credits to use on the site. They can get credits by selling items and use credit by buying items. Non-registered users can search through the listings, but only registered users can make bids on listings.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# This is what I have done throughout the process
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- A user with a stud.noroff.no email may register
+- A registered user may log in
+- A registered user may log out
+- A registered user may update their avatar
+- A registered user may view their total credit
+- A registered user may create a Listing with a title, deadline date, media gallery and description
+- A registered user may add a Bid to another user’s Listing
+- A registered user may view Bids made on a Listing
+- A registered user may use credit to make a Bid on another user’s Listing
+- An unregistered user may search through Listings
 
-### `npm test`
+## How to Install
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Follow these steps to set up and run the project:
 
-### `npm run build`
+1. **Clone the Repository:**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   git clone https://github.com/YoelSam1/Semester-Project-2.git
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **bash:**
+   `npm install`
 
-### `npm run eject`
+## How To Use the NPM Scripts
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Build the project:** `npm run build`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Build the project:** `npm watch`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Required links
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Trello
+- Netlify
+- Figma
+-
 
-## Learn More
+# Dependencies
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Bootstrap 5.3.2
+- SASS
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
 ### `npm run build` fails to minify
 
