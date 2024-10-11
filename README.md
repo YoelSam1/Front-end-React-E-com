@@ -16,7 +16,7 @@ Features include:
 - Contact form with input validation
 
 
-Project Pages
+## Project Pages
 - Homepage: Displays all products fetched from the API with a look-ahead search bar.
 - Product Page: Shows product details, including title, description, reviews, and pricing, along with the option to add the 
   product to the cart.
