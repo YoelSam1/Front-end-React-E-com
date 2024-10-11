@@ -35,5 +35,8 @@ Follow these steps to set up the project locally:
 git clone git@github.com:your-username/ecommerce-store.git
 ```
 
-2. Install the dependencies:
-npm run start
+2. **bash:**
+   `npm install`
+
+3. **Running:**
+   `npm install`
