@@ -1,60 +1,35 @@
-### Semester Project 2 - _EasyBid_ An auction site
+# E-Commerce Store Project
 
-![image](./easybid-site%20.png)
+A React-based eCommerce store that allows users to browse products, add them to a cart, and proceed through a checkout process. The app includes a homepage with a searchable product list, individual product pages, and a contact form with validation.
 
-- An auction site is looking to launch a website where users can add items to be bid on and bid on items other users have put up for auction.
+## Description
 
-# About the project
+This project was developed to demonstrate the use of React for building a functional eCommerce store. It interacts with a RESTful API to allow users to view product details, add items to a cart, and complete a purchase through a checkout process.
 
-- When a new user joins the website, they are given 1000 credits to use on the site. They can get credits by selling items and use credit by buying items. Non-registered users can search through the listings, but only registered users can make bids on listings.
+Features include:
 
-# This is what I have done throughout the process
+- Homepage with a dynamic search bar that filters products
+- Product detail pages with reviews and pricing
+- Cart functionality with item count and total cost
+- Checkout process with order confirmation
+- Fully responsive design using CSS modules and styled-components
+- Contact form with input validation
 
-- A user with a stud.noroff.no email may register
-- A registered user may log in
-- A registered user may log out
-- A registered user may update their avatar
-- A registered user may view their total credit
-- A registered user may create a Listing with a title, deadline date, media gallery and description
-- A registered user may add a Bid to another user’s Listing
-- A registered user may view Bids made on a Listing
-- A registered user may use credit to make a Bid on another user’s Listing
-- An unregistered user may search through Listings
+## Built With
 
-## How to Install
+- [React.js](https://reactjs.org/)
+- [React Router](https://reactrouter.com/)
+- [Styled-components](https://styled-components.com/)
+- [CSS Modules](https://github.com/css-modules/css-modules)
+- [Bootstrap](https://getbootstrap.com/) (optional)
 
-Follow these steps to set up and run the project:
+## Getting Started
 
-1. **Clone the Repository:**
+### Installing
 
-   ```bash
-   git clone https://github.com/YoelSam1/Semester-Project-2.git
+Follow these steps to set up the project locally:
 
-   ```
+1. Clone the repository:
 
-2. **bash:**
-   `npm install`
-
-## How To Use the NPM Scripts
-
-- **Build the project:** `npm run build`
-
-- **Build the project:** `npm watch`
-
-# Required links
-
-- Trello
-- Netlify
-- Figma
--
-
-# Dependencies
-
-- Bootstrap 5.3.2
-- SASS
-
-
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+git clone git@github.com:your-username/ecommerce-store.git
