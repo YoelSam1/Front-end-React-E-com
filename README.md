@@ -15,6 +15,19 @@ Features include:
 - Fully responsive design using CSS modules and styled-components
 - Contact form with input validation
 
+
+Project Pages
+- Homepage: Displays all products fetched from the API with a look-ahead search bar.
+- Product Page: Shows product details, including title, description, reviews, and pricing, along with the option to add the 
+  product to the cart.
+- Cart Page: Displays products added to the cart with a total price and checkout option.
+- Checkout Success Page: Confirms a successful checkout and provides a link back to the store.
+- Contact Page: Includes a form with validation for the following fields:
+   - Full Name (min 3 characters, required)
+   - Subject (min 3 characters, required)
+   - Email (valid email, required)
+   - Message Body (min 3 characters, required)
+
 ## Built With
 
 - [React.js](https://reactjs.org/)
