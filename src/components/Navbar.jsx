@@ -1,24 +1,44 @@
-import React from "react";
-import { Navbar, Nav, Container } from "react-bootstrap";
+// src/Components/Navbar.jsx
+import React, { useState, useEffect } from "react";
+import { Navbar as BootstrapNavbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import { FaShoppingCart } from "react-icons/fa";
 import { useCart } from "../Context/cartContext";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "../App.css";
 
-const NavigationBar = () => {
+// Utility function to fetch user data (assuming it's stored in localStorage)
+const getUser = () => JSON.parse(localStorage.getItem('user'));
+
+const AppNavbar = () => {
   const { cartCount } = useCart();
   const location = useLocation();
+  const navigate = useNavigate();
+
+  // Local state to manage user information
+  const [user, setUser] = useState(getUser());
+
+  useEffect(() => {
+    // Update user state if needed
+    setUser(getUser());
+  }, []);
+
+  // Logout function
+  const handleLogout = () => {
+    localStorage.removeItem('user');
+    setUser(null);
+    navigate('/');
+  };
 
   return (
     <>
-      <Navbar bg="light" expand="lg" fixed="top">
+      <BootstrapNavbar bg="light" expand="lg" fixed="top">
         <Container>
-          <Navbar.Brand as={Link} to="/">
+          <BootstrapNavbar.Brand as={Link} to="/">
             <strong>E-com</strong>
-          </Navbar.Brand>
+          </BootstrapNavbar.Brand>
 
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
+          <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" />
+          <BootstrapNavbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link
                 as={Link}
@@ -47,9 +67,27 @@ const NavigationBar = () => {
             <Nav.Link as={Link} to="/cart">
               <FaShoppingCart /> {cartCount}
             </Nav.Link>
-          </Navbar.Collapse>
+
+            {user ? (
+              <NavDropdown
+                title={<img src={user.avatar} alt="Avatar" className="avatar" />}
+                id="basic-nav-dropdown"
+              >
+                <NavDropdown.Item as={Link} to="/profile">
+                  Profile
+                </NavDropdown.Item>
+                <NavDropdown.Item onClick={handleLogout}>
+                  Logout
+                </NavDropdown.Item>
+              </NavDropdown>
+            ) : (
+              <Nav.Link as={Link} to="/login">
+                Login
+              </Nav.Link>
+            )}
+          </BootstrapNavbar.Collapse>
         </Container>
-      </Navbar>
+      </BootstrapNavbar>
       <div>
         <hr className="border-white" />
       </div>
@@ -57,4 +95,4 @@ const NavigationBar = () => {
   );
 };
 
-export default NavigationBar;
+export default AppNavbar;

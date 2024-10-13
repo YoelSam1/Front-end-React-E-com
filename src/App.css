@@ -5,6 +5,12 @@ body {
   padding: 0;
 }
 
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
 body {
   display: flex;
   flex-direction: column;
